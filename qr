@@ -10,7 +10,7 @@
 
     <script>
         const tujuan = {
-            "001": "https://www.google.com/"
+            "001": "https://www.youtube.com/"
         };
 
         const params = new URLSearchParams(window.location.search);
