@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>QR Redirect</title>
+</head>
+
+<body>
+    <h2 id="status">Memproses...</h2>
 
     <script>
         const tujuan = {
-            "001": "https://www.google.com"
+            "001": "https://www.google.com/"
         };
 
         const params = new URLSearchParams(window.location.search);
         const id = params.get("id");
 
         if (tujuan[id]) {
-            window.location.href = tujuan[id];
+            window.location.replace(tujuan[id]);
+        } else {
+            document.getElementById("status").innerText =
+                "QR tidak ditemukan";
         }
     </script>
-</head>
-
-<body>
-    <h2>QR belum aktif</h2>
-    <p>Silakan hubungi admin.</p>
 </body>
 </html>
